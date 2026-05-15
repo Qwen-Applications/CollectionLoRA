@@ -1,0 +1,89 @@
+model_name: qwen-image-edit-plus
+real_name: qwen-image-edit-plus
+fake_name: qwen-image-edit-plus
+generator_fsdp_wrap_strategy: size
+real_score_fsdp_wrap_strategy: size
+fake_score_fsdp_wrap_strategy: size
+text_encoder_fsdp_wrap_strategy: size
+generator_grad:
+  model: true
+real_score_grad:
+  model: false
+fake_score_grad:
+  model: true
+denoising_step_list:
+- 1000
+- 954.5454
+- 900.0000
+- 833.3333
+- 750.0000
+- 642.8571
+- 500.0000
+- 300.0000
+num_train_timestep: 1000
+timestep_shift: 3.0
+real_guidance_scale: 4.0
+generator_task: image
+denoising_loss_type: flow
+mixed_precision: true
+seed: 0
+wandb_host: https://api.wandb.ai
+wandb_key: your_wandb_key
+wandb_entity: ""
+wandb_project: causvid
+wandb_name: causvid_qwen-image-edit-plus_collectionlora
+sharding_strategy: full
+lr: 1.0e-04
+fake_lr: 1.0e-04
+beta1: 0.9
+beta2: 0.999
+data_path: placeholder
+lora_data_path: placeholder
+lora_type_path: ckpt/data/50_in_1_lora_type.jsonl
+batch_size: 1
+log_iters: 500
+negative_prompt: ''
+dfake_gen_update_ratio: 5
+image_or_video_shape:
+- 1
+- 1
+- 16
+- 128
+- 128
+output_path: mnt/collectionlora_50_in_1/
+distillation_loss: dmd
+gradient_checkpointing: true
+backward_simulation: true
+warp_denoising_step: false
+qwen_image_cfg_norm: false
+visual_path: ${output_path}/visual
+use_lora: true
+lora_r: 128
+lora_alpha: 128
+lora_dropout: 0.0
+lora_target_modules: 
+  - "txt_mod.1"
+  - "img_mlp.net.2"
+  - "img_mod.1"
+  - "add_q_proj"
+  - "add_k_proj"
+  - "add_v_proj"
+  - "txt_mlp.net.2"
+  - "to_k"
+  - "to_q"
+  - "to_v"
+  - "to_add_out"
+  - "to_out.0"
+  - "img_mlp.net.0.proj"
+  - "txt_mlp.net.0.proj"
+crop: crop_and_resize_to_target_size
+multi_lora_teacher: true
+recaption_prompt: recaption_prompt_with_trigword
+switch_lora_ratio: 0.5
+sync_all_rank: false
+limited_timestep_num: 5
+timestep_upper_bound: 1000
+timestep_lower_bound: 500
+target_prior_loss_weight: 1.0
+generator_denoising_loss: true
+multi_lora_dataset_shuffle: false
