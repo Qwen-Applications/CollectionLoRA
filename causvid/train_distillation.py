@@ -107,8 +107,22 @@ class Trainer:
 
             base_model = self.distillation_model.fake_score.model         
             self.distillation_model.fake_score.model = self.load_lora(base_model, self.reload_lora_and_retrain_path, if_merge=False,static_key='critic') 
+
+            # init the student lora config
+            lora_r = getattr(self.config, "lora_r", 128)
+            lora_alpha = getattr(self.config, "lora_alpha", 128)
+            lora_dropout = getattr(self.config, "lora_dropout", 0.0)
+            lora_target_modules = getattr(self.config, "lora_target_modules", None)
+            self.student_lora_config = LoraConfig(
+                r=lora_r,
+                lora_alpha=lora_alpha,
+                lora_dropout=lora_dropout,
+                target_modules=lora_target_modules,
+                bias="none",
+                task_type=None,
+            )
         else:
-            # 3. load a new lora for generator, and this need to init the self.lora_config
+            # 3. load a new lora for generator, and this need to init the self.student_lora_config
             print("loading a new lora for generator...")
             base_model = self.distillation_model.generator.model
             self.distillation_model.generator.model = self.load_lora(base_model,lora_root_path=None, if_merge=False)
@@ -341,18 +355,19 @@ class Trainer:
             base_dtype = torch.bfloat16
 
         if lora_root_path is not None:
+            # lora_root_path = _resolve_repo_path(lora_root_path)
             yaml_path = os.path.join(lora_root_path, "lora_config", "adapter_config.yaml")
             json_path = os.path.join(lora_root_path, "lora_config", "adapter_config.json")
             state_dict_path = os.path.join(lora_root_path, "model.pt")
             safetensors_path = os.path.join(lora_root_path, "model.safetensors")
             print(f"load a well-trained lora from {lora_root_path}")
         else:
-            print("init a new lora to train, and this will init the self.lora_config")
+            print("init a new lora to train, and this will init the self.student_lora_config")
             lora_r = getattr(self.config, "lora_r", 128)
             lora_alpha = getattr(self.config, "lora_alpha", 128)
             lora_dropout = getattr(self.config, "lora_dropout", 0.0)
             lora_target_modules = getattr(self.config, "lora_target_modules", None)
-            self.lora_config = LoraConfig(
+            self.student_lora_config = LoraConfig(
                 r=lora_r,
                 lora_alpha=lora_alpha,
                 lora_dropout=lora_dropout,
@@ -360,7 +375,7 @@ class Trainer:
                 bias="none",
                 task_type=None,
             )
-            peft_model = get_peft_model(base_model, self.lora_config)
+            peft_model = get_peft_model(base_model, self.student_lora_config)
             peft_model = peft_model.to(dtype=base_dtype)
             return peft_model
         
@@ -385,6 +400,7 @@ class Trainer:
                 self.lora_config = LoraConfig(**lora_config_dict)
         else:
             raise ValueError(f"Lora config not found in {lora_root_path}")
+            
         
         
         if add_adapter:
@@ -473,7 +489,7 @@ class Trainer:
                        f"checkpoint_model_{self.step:06d}", "model.pt"))
             
             if self.use_lora:
-                config_dict = self.lora_config.to_dict()
+                config_dict = self.student_lora_config.to_dict()
                 def make_json_serializable(obj):
                     if isinstance(obj, set):
                         return list(obj)
