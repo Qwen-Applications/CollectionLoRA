@@ -3,12 +3,12 @@
 # CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2605.25378>)
-[![Hugging Face Models(Comming Soon)](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/<INSERT_MODEL_LINK_HERE>)
 [![Project Page](https://img.shields.io/badge/Project-Page-159957.svg)](<https://collectionlora.github.io/>)
+<!-- [![Comming Soon Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/<INSERT_MODEL_LINK_HERE>) -->
 
 <br>
 
-**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **[Mushui Liu](https://xiaobul.github.io/)**<sup>1</sup> · **Zhao Wang**<sup>1</sup> · **Yunlong Yu**<sup>1,*</sup> · **Jiaming Liu**<sup>2,*‡</sup> · **Ruihua Huang**<sup>2</sup>
+**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **[Mushui Liu](https://xiaobul.github.io/)**<sup>1</sup> · **Zhao Wang**<sup>1,*</sup> · **Yunlong Yu**<sup>1,*</sup> · **Jiaming Liu**<sup>2,*‡</sup> · **Ruihua Huang**<sup>2</sup>
 
 <sup>1</sup> Zhejiang University  ·  <sup>2</sup> Qwen Applications Business Group, Alibaba  ·  <sup>3</sup> Xi'an Jiaotong University
 
