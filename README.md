@@ -8,7 +8,7 @@
 
 <br>
 
-**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **[Mushui Liu](https://xiaobul.github.io/)**<sup>1</sup> · **Zhao Wang**<sup>1,*</sup> · **Yunlong Yu**<sup>1,*</sup> · **Jiaming Liu**<sup>2,*‡</sup> · **Ruihua Huang**<sup>2</sup>
+**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **[Mushui Liu](https://xiaobul.github.io/)**<sup>1</sup> · **Zhao Wang**<sup>1,\*</sup> · **Yunlong Yu**<sup>1,\*</sup> · **Jiaming Liu**<sup>2,\*‡</sup> · **Ruihua Huang**<sup>2</sup>
 
 <sup>1</sup> Zhejiang University  ·  <sup>2</sup> Qwen Applications Business Group, Alibaba  ·  <sup>3</sup> Xi'an Jiaotong University
 
