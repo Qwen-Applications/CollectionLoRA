@@ -2,13 +2,13 @@
 
 # CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/<INSERT_ARXIV_ID_HERE>)
-[![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/<INSERT_MODEL_LINK_HERE>)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2605.25378>)
+[![Hugging Face Models(Comming Soon)](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/<INSERT_MODEL_LINK_HERE>)
 [![Project Page](https://img.shields.io/badge/Project-Page-159957.svg)](<https://collectionlora.github.io/>)
 
 <br>
 
-**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **Mushui Liu**<sup>1</sup> · **Zhao Wang**<sup>1</sup> · **Yunlong Yu**<sup>1,*</sup> · **Jiaming Liu**<sup>2,*‡</sup> · **Ruihua Huang**<sup>2</sup>
+**Fangtai Wu**<sup>1,2</sup> · **Hailong Guo**<sup>2</sup> · **Shijie Huang**<sup>2</sup> · **Jiayi Song**<sup>2,3</sup> · **Yubo Huang**<sup>2</sup> · **[Mushui Liu](https://xiaobul.github.io/)**<sup>1</sup> · **Zhao Wang**<sup>1</sup> · **Yunlong Yu**<sup>1,*</sup> · **Jiaming Liu**<sup>2,*‡</sup> · **Ruihua Huang**<sup>2</sup>
 
 <sup>1</sup> Zhejiang University  ·  <sup>2</sup> Qwen Applications Business Group, Alibaba  ·  <sup>3</sup> Xi'an Jiaotong University
 
@@ -35,9 +35,14 @@
 
 ---
 
-## 📢 News
+### 📄 Todo List
 
-- **Released:** We have released the **model weights**, **inference code**, and **training code** in this repository.
+#### 🌟 Milestones & Core Release
+
+* ✅ **Release the paper**
+* ✅ **Open-source training and inference code**
+* [ ] **Open-source model weights**
+
 
 ## 🛠️ Installation
 
@@ -116,12 +121,14 @@ bash train_qwen_image_edit_plus_multi_lora_teacher.sh
 If you find CollectionLoRA useful or relevant to your research, please kindly cite our papers:
 
 ```bibtex
-@misc{wu2026collectionlora,
-  title        = {CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation},
-  author       = {Wu, Fangtai and Guo, Hailong and Huang, Shijie and Song, Jiayi and Huang, Yubo and Liu, Mushui and Wang, Zhao and Yu, Yunlong and Liu, Jiaming and Huang, Ruihua},
-  year         = {2026},
-  howpublished = {Manuscript},
-  note         = {Replace with official venue / arXiv identifier when available.}
+@misc{wu2026collectionloracollecting50effects,
+      title={CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation}, 
+      author={Fangtai Wu and Hailong Guo and Shijie Huang and Jiayi Song and Yubo Huang and Mushui Liu and Zhao Wang and Yunlong Yu and Jiaming Liu and Ruihua Huang},
+      year={2026},
+      eprint={2605.25378},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.25378}, 
 }
 
 ```
