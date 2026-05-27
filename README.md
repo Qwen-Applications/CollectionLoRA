@@ -12,7 +12,7 @@
 
 <sup>1</sup> Zhejiang University  ·  <sup>2</sup> Qwen Applications Business Group, Alibaba  ·  <sup>3</sup> Xi'an Jiaotong University
 
-<sup>*</sup> Corresponding authors  ·  <sup>‡</sup> Project leader
+<sup>*</sup> Corresponding authors  ·  <sup>‡</sup> Project lead
 
 [wft@zju.edu.cn](mailto:wft@zju.edu.cn)  ·  [liujiaming.ljl@alibaba-inc.com](mailto:liujiaming.ljl@alibaba-inc.com)
 
