@@ -2,7 +2,7 @@
 
 # CollectionLoRA: Collecting 50 Effects in 1 LoRA via Multi-Teacher On-Policy Distillation
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2605.25378>)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2605.25378)
 [![Project Page](https://img.shields.io/badge/Project-Page-159957.svg)](<https://collectionlora.github.io/>)
 <!-- [![Comming Soon Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/<INSERT_MODEL_LINK_HERE>) -->
 
