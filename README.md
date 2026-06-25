@@ -23,6 +23,9 @@
 > **TL;DR:** **CollectionLoRA** is a **multi-teacher on-policy distillation** framework that distills the concepts from many effect LoRAs (e.g., **50~180**) **and** few-step generation capability into **a single LoRA**, cutting deployment cost and reducing interference from cascading many adapters with acceleration modules.
 
 ---
+## 📰 News
+- **[2026.6.18]** 🎉 CollectionLoRA has been accepted by **ECCV 2026**! 🎉
+
 
 ## 🌟 Highlights
 
